@@ -28,4 +28,4 @@ const Workouts = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("Profile", Profile);
+module.exports = mongoose.model("Workouts", Workouts);

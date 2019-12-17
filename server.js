@@ -2,13 +2,12 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const apiRoutes = require('./routes/api-routes');
-const htmlRoutes = require('./routes/html-routes')
 
 
 const app = express();
 const PORT = process.env.PORT || 5150;
 
+require('./routes/api-routes')(app);
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");

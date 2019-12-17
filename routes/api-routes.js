@@ -1,12 +1,24 @@
-const express = require('express');
-const router = express.Router();
+const Workouts = require("../models/workouts");
 
-router.get('/workouts', (req, res) => {
-    res.json({
-        connection: 'success',
-        data: 'this is the workout library'
+module.exports = (app => {
+
+    app.get('/', (req, res) => {
+        res.json('welcome to the page!');
     })
-})
-
-
-module.exports = router;
+    
+    app.get("/workouts", (req, res) => {
+      Workouts.find()
+        .then(workout => {
+          res.json({
+            confirmation: "success",
+            data: workout
+          });
+        })
+        .catch(err => {
+          res.json({
+            confirmation: "fail",
+            message: err.message
+          });
+        });
+    });
+});
