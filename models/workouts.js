@@ -1,11 +1,31 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Workouts = new mongoose.Schema({
-    arms: {},
-    chest: {},
-    back: {},
-    core: {},
-    legs: {}
+  arms: {
+    type: String,
+    trim: true,
+    default: ""
+  },
+  chest: {
+    type: String,
+    trim: true,
+    default: ""
+  },
+  back: {
+    type: String,
+    trim: true,
+    default: ""
+  },
+  core: {
+    type: String,
+    trim: true,
+    default: ""
+  },
+  legs: {
+    type: String,
+    trim: true,
+    default: ""
+  }
 });
 
-module.exports = mongoose.model('Profile', Profile)
+module.exports = mongoose.model("Profile", Profile);
