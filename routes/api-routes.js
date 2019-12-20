@@ -1,4 +1,4 @@
-const Workouts = require("../models/workouts");
+const Exercises = require("../models/exercises");
 
 module.exports = (app => {
 
@@ -6,12 +6,12 @@ module.exports = (app => {
         res.json('welcome to the page!');
     })
     
-    app.get("/workouts", (req, res) => {
-      Workouts.find()
-        .then(workout => {
+    app.get("/exercises", (req, res) => {
+     Exercises.find({})
+        .then(exercise => {
           res.json({
             confirmation: "success",
-            data: workout
+            data: exercise
           });
         })
         .catch(err => {

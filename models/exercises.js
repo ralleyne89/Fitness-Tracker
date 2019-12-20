@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+let exercises = require('../config/exercises.json')
 
-const Workouts = new mongoose.Schema({
+const Exercises = new mongoose.Schema({
   arms: {
     type: String,
     trim: true,
@@ -28,4 +29,6 @@ const Workouts = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("Workouts", Workouts);
+
+
+module.exports = mongoose.model("Exercises", Exercises);

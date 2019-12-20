@@ -1,0 +1,7 @@
+{
+  "arms": { "name": "chinups", "type": "biceps", "reps": "10"},
+  "chest": ["pushups"],
+  "back": ["pullups"],
+  "core": ["plank", "leg raises", "mountain climbers"],
+  "legs": ["squats", "lunges", "burpees"]
+}
