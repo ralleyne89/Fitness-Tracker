@@ -16,7 +16,7 @@ const client = new MongoClient(url);
 
 
 const app = express();
-// const PORT = process.env.PORT || 5150;
+const PORT = process.env.PORT || 5150;
 
 require('./routes/api-routes')(app);
 
@@ -39,3 +39,6 @@ client.connect(function(err) {
 
   client.close();
 });
+
+app.listen(PORT,() => console.log("Server is connected on PORT " + PORT))
+
